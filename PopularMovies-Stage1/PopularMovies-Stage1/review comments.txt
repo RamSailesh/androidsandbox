@@ -1,0 +1,57 @@
+ImageAdapter.java line number 76
+
+Good job first checking whether the convertView is null and reuse it when you use an Adapter. Well done!
+
+convertView : The old view to reuse, if possible. Note: You should check that this view is non-null and of an appropriate type before using. If it is not possible to convert this view to display the correct data, this method can create a new view. Heterogeneous lists can specify their number of view types, so that this View is always of the right type (see getViewTypeCount() and getItemViewType(int)).
+
+ImageAdapter.java line number 80
+Here, to learn more, you can also try to use error and placeholder in Picasso here to avoid crashing down due to empty string values or null values. Before the error placeholder is shown, your request will be retried three times. sample codes (from Picasso documentation):
+
+Picasso.with(context)
+    .load(url)
+    .placeholder(R.drawable.user_placeholder)
+    .error(R.drawable.user_placeholder_error)
+    .into(imageView);
+The quality of the data from this movie database is really good. However, when you want to use Picasso to show image fetched from other places (for example, Spotify), there is much higher chance for you to get Picasso an empty string value or null value. This is just for your information. :)
+
+fragment_main.xml
+line number 17
+It is right to set numColumns attribute equals to 2. To learn more, you can also try to set it equals to auto_fit. By doing so, your app can have the ability to judge the number of columns it should show based on the screen size (or different orientation). Try it! :)
+supp:sc
+http://developer.android.com/reference/android/widget/GridView.html#attr_android%3anu
+
+activity_movie_detail.xml
+line number 2
+Good job setting up your ScrollView for your activity_movie_detail.xml file. By providing a mechanism to scroll your app up and down, your can help your users view all of the content even if there was too much information to be shown. Well done! 
+
+MovieDetail.java
+line number 34
+Since from your codes, I can see that you are a really advanced student, in order to learn more, you could also check a package called "butterknife". In the future, you can find and automatically cast the corresponding view in your layout easily. This will save you a lot of time. :smiley:
+Supp:
+http://jakewharton.github.io/butterknife/
+Also, a video tutorial:
+https://www.youtube.com/watch?v=1A4LY8gUEDs
+
+MovieDataFetcher.java
+line number 30
+Well implemented AsyncTask.
+
+To learn more, you can also try to use Retrofit library in your future projects to handle fetching data using third party API and network operations. It can make your life easier.
+
+Ref: http://square.github.io/retrofit/
+
+Movie.java
+Line number 8
+Serializable is really good but Parcelable interface is better since it is optimized for Android usage so that it is faster than Serializable. You can learn more reading these links:
+Supp:
+http://www.developerphil.com/parcelable-vs-serializable/
+http://www.3pillarglobal.com/insights/parcelable-vs-java-serialization-in-android-app-development
+http://www.easyinfogeek.com/2014/01/android-tutorial-two-methods-of-passing.html
+
+build.gradle
+Line number 9
+Yes great! You have your minSdkVersion value set to 19, this implementation can make your app able to run on most of the Android devices (96%). In the meantime, your app can gain a lot of latest powerful features from Android 4.X. Great job here!
+Supp: https://developer.android.com/about/dashboards/index.html?utm_source=suzunone
+
+
+
